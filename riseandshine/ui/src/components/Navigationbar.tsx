@@ -54,50 +54,58 @@ const Navigationbar: React.FC = () => {
 
     return (
         <nav
-            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
+            className={`fixed top-0 left-0 w-full z-[9999] transition-all duration-300 ${isScrolled
                 ? "bg-white shadow-xl py-3"
                 : "bg-white shadow-md py-4"
                 }`}
+            style={{ right: 0 }}
         >
-            <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-                <a
-                    href="#home"
-                    onClick={(e) => handleSmoothScroll(e, "#home")}
-                    className="flex items-center gap-3"
-                >
-                    <img
-                        src={newlogo}
-                        alt="Company Logo"
-                        className={`transition-all duration-300 hover:scale-105 ${isScrolled ? "h-12" : "h-16"} w-auto object-contain drop-shadow-lg`}
-                    />
-                </a>
+            <div className="w-full px-4 sm:px-6">
+                <div className="max-w-7xl mx-auto flex items-center justify-between">
+                    <a
+                        href="#home"
+                        onClick={(e) => handleSmoothScroll(e, "#home")}
+                        className="flex items-center gap-3 z-10 flex-shrink-0"
+                    >
+                        <img
+                            src={newlogo}
+                            alt="Company Logo"
+                            className={`transition-all duration-300 hover:scale-105 ${isScrolled ? "h-12" : "h-16"} w-auto object-contain drop-shadow-lg`}
+                        />
+                    </a>
 
-                <div className="hidden md:flex items-center gap-8">
-                    {navigationTabs.map((tab) => (
-                        <a
-                            key={tab.name}
-                            href={tab.href}
-                            onClick={(e) => handleSmoothScroll(e, tab.href)}
-                            className="text-gray-800 hover:text-blue-600 font-semibold text-base transition-colors duration-200 relative group"
-                        >
-                            {tab.name}
-                            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
-                        </a>
-                    ))}
+                    <div className="hidden md:flex items-center gap-8">
+                        {navigationTabs.map((tab) => (
+                            <a
+                                key={tab.name}
+                                href={tab.href}
+                                onClick={(e) => handleSmoothScroll(e, tab.href)}
+                                className="text-gray-800 hover:text-blue-600 font-semibold text-base transition-colors duration-200 relative group"
+                            >
+                                {tab.name}
+                                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
+                            </a>
+                        ))}
+                    </div>
+
+                    <button
+                        aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+                        aria-expanded={isMenuOpen}
+                        onClick={() => setIsMenuOpen(!isMenuOpen)}
+                        className="md:hidden flex-shrink-0 p-3 rounded-lg hover:bg-gray-100 transition-colors duration-200 touch-manipulation flex items-center justify-center"
+                        style={{
+                            WebkitTapHighlightColor: 'transparent',
+                            minWidth: '48px',
+                            minHeight: '48px'
+                        }}
+                    >
+                        {isMenuOpen ? (
+                            <X className="h-6 w-6 text-gray-700" />
+                        ) : (
+                            <Menu className="h-6 w-6 text-gray-700" />
+                        )}
+                    </button>
                 </div>
-
-                <button
-                    aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-                    aria-expanded={isMenuOpen}
-                    onClick={() => setIsMenuOpen(!isMenuOpen)}
-                    className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors duration-200"
-                >
-                    {isMenuOpen ? (
-                        <X className="h-6 w-6 text-gray-700" />
-                    ) : (
-                        <Menu className="h-6 w-6 text-gray-700" />
-                    )}
-                </button>
             </div>
 
             <div
