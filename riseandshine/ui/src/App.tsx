@@ -8,7 +8,7 @@ import Footer from './components/Footer';
 
 const App = () => {
   return (
-    <>
+    <div style={{ overflowX: 'hidden', width: '100%', position: 'relative' }}>
       <Navigationbar />
       <Home />
       <About />
@@ -16,7 +16,7 @@ const App = () => {
       <ReviewsCarousel />
       <Contact />
       <Footer />
-    </>
+    </div>
   )
 }
 
