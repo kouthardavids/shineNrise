@@ -28,7 +28,7 @@ const Contact = () => {
 
         try {
             const apiUrl = import.meta.env.VITE_API_URL;
-            const response = await axios.post(`${apiUrl}/createEmail`, formData);
+            const response = await axios.post(`https://shine-nrise-yyqu.vercel.app/api/createEmail`, formData);
 
             if (response.data.success) {
                 setSubmitted(true);
