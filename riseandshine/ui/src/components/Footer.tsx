@@ -11,7 +11,7 @@ const Footer = () => {
             <div className="max-w-7xl mx-auto px-6 py-16">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
                     <div>
-                        <h3 className="text-white text-2xl font-bold mb-4">Shine N Rise</h3>
+                        <h3 className="text-white text-2xl font-bold mb-4">AG Exterior Cleaning Services</h3>
                         <p className="text-gray-400 mb-6 leading-relaxed">
                             Delivering exceptional service and restoring valuable time to our clients through dedication and excellence.
                         </p>
@@ -71,7 +71,7 @@ const Footer = () => {
                 <div className="max-w-7xl mx-auto px-6 py-6">
                     <div className="flex flex-col md:flex-row justify-between items-center gap-4">
                         <p className="text-gray-400 text-sm text-center md:text-left">
-                            © {new Date().getFullYear()} Shine N Rise. All rights reserved.
+                            © {new Date().getFullYear()} AG Exterior Cleaning Services. All rights reserved.
                         </p>
                     </div>
                 </div>
