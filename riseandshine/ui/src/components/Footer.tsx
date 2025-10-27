@@ -82,7 +82,7 @@ const Footer = () => {
                 className="fixed bottom-8 right-8 bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-all duration-300 z-50"
                 aria-label="Scroll to top"
             >
-                <ArrowUp className="h-6 w-6" />
+                <ArrowUp className="h-6 w-6"/>
             </button>
         </footer>
     );
