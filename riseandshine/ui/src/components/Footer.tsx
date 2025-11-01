@@ -60,7 +60,7 @@ const Footer = () => {
                                 </a>
                             </li>
                             <a href="mailto:goliathabdullatief@gmail.com" className="text-gray-400 hover:text-white transition-colors">
-                                goliathabdullatief@gmail.com
+                                agexteriorcleaningservices@gmail.com
                             </a>
                         </ul>
                     </div>
